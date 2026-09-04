@@ -20,7 +20,7 @@ const SERVER_QUERY_ADDRESS = '103.88.233.81:35654';
 
 // Se quiser trocar para o servidor de MANUTENÇÃO manualmente (ex: durante updates),
 // basta mudar esta flag para true. Ela tem prioridade sobre a consulta da API.
-const MANUTENCAO = false;
+const MANUTENCAO = true;
 
 const statusEl = document.getElementById('server-status');
 const playersEl = document.getElementById('players');
