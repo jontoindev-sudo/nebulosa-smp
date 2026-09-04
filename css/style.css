@@ -36,18 +36,40 @@ nav a:hover, nav a.active { color: var(--text); }
 
 .hero { margin: 55px auto 0; max-width: 1180px; padding: 0 24px; }
 .hero-image {
-    align-items: center; background: linear-gradient(135deg, #171827, #090b12); border: 1px solid var(--border);
-    border-radius: 18px; display: flex; flex-direction: column; height: 390px; justify-content: center;
-    margin-bottom: -70px; overflow: hidden; position: relative;
+    align-items: center;
+    background-image: url("../assets/images/nebulosabanner.jpg");
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    display: flex;
+    height: 520px;
+    justify-content: center;
+    margin-bottom: -70px;
+    overflow: hidden;
+    position: relative;
 }
-.hero-image::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle, rgba(155,124,255,.18), transparent 60%); }
+.hero-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(8, 10, 16, 0.15),
+        rgba(8, 10, 16, 0.55)
+    );
+}
 .hero-image span, .hero-image small { position: relative; }
 .hero-image span { font-family: Cinzel, serif; font-size: 28px; letter-spacing: 3px; }
 .hero-image small { color: var(--muted); margin-top: 10px; }
 .hero-content { margin: 0 auto; max-width: 900px; padding: 110px 30px 50px; text-align: center; }
 .eyebrow { color: var(--accent-2); font-size: 12px; font-weight: 600; letter-spacing: 3px; }
 h1, h2 { font-family: Cinzel, serif; }
-.hero h1 { font-size: clamp(42px, 8vw, 82px); margin: 14px 0; }
+.hero h1 {
+    font-size: clamp(42px, 8vw, 82px);
+    margin: 14px 0;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
+}
 .hero h1 span { color: var(--accent-2); }
 .hero-content > p:not(.eyebrow), .intro { color: var(--muted); line-height: 1.7; }
 .hero-actions { display: flex; gap: 12px; justify-content: center; margin-top: 28px; }
@@ -60,6 +82,9 @@ h1, h2 { font-family: Cinzel, serif; }
 .label { color: var(--muted); display: block; font-size: 11px; letter-spacing: 2px; margin-bottom: 10px; }
 .server-info strong { display: block; font-size: 20px; }
 .online { color: #75e6a4; }
+.offline { color: #e67575; }
+.maintenance { color: #e6c775; }
+.loading { color: var(--muted); }
 .copy-button { background: transparent; color: var(--muted); margin-top: 10px; padding: 6px 10px; }
 
 .socials, .page { margin: 90px auto; max-width: 1100px; padding: 0 24px; }
